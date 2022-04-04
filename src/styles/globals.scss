@@ -1,0 +1,669 @@
+// html,
+// body {
+//   padding: 0;
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+//     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+// }
+
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+/* Fonts
+/* ---------------------------------------------------------- */
+
+@font-face {
+  font-family: "UnifrakturMaguntia";
+  src: url("../../public/fonts/UnifrakturMaguntia-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../../public/fonts/LibreBaskerville-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../../public/fonts/LibreBaskerville-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../../public/fonts/LibreBaskerville-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dawning of a New Day";
+  src: url("../../public/fonts/DawningofaNewDay-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hellvetica";
+  src: url("../../public/fonts/Hellvetica.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Monoton";
+  src: url("../../public/fonts/Monoton-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grenze Gotisch";
+  src: url("../../public/fonts/GrenzeGotisch-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-Black.ttf");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../../public/fonts/PlayfairDisplay-VariableFont_wght.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../../public/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RobertSans";
+  src: url("../../public/fonts/RobertSans-Bold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "RobertSans";
+  src: url("../../public/fonts/RobertSans-Black.ttf");
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* Variables
+/* ---------------------------------------------------------- */
+:root {
+  /* Colours */
+  --color-picton-blue: #26a8ed;
+  --color-hawkes-blue: #cbeafb;
+  --color-portafino: #fdffb6;
+  --color-mystic: #e3e9ed;
+  --color-athens-gray: #e9ecef;
+  --color-outer-space: #343a40;
+  --color-woodsmoke: #15171a;
+  --color-cod-gray: #0a0a0a;
+
+  /* Fonts */
+  --font-unifraktur: "UnifrakturMaguntia", cursive;
+  --font-libre-baskerville: "Libre Baskerville", serif;
+  --font-mono: Menlo, Courier, monospace;
+  --font-dawning-of-a-new-day: "Dawning of a New Day", cursive;
+  --font-hellvetica: "Hellvetica", "Helvetica Neue", serif;
+  --font-monoton: "Monoton", cursive;
+  --font-grenze-gotisch: "Grenze Gotisch", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --font-monteserrat: "Montserrat", sans-serif;
+  --font-playfair-display: "PlayfairDisplay", cursive;
+  --font-robert-sans: "RobertSans", sans-serif;
+  --font-serif: Georgia, Times, serif;
+  --font-light: 100;
+  --font-normal: 400;
+  --font-bold: 700;
+  --font-heavy: 800;
+
+  /* Sizes */
+  --height: 4rem;
+  --margin: 2rem;
+  --radius: 0.6rem;
+
+  /* Shadows */
+  --shadow-normal: 0 10px 10px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-bezier: cubic-bezier(0.02, 0.01, 0.5, 1);
+}
+
+/* Reset
+/* ---------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+img {
+  max-width: 100%;
+}
+html {
+  box-sizing: border-box;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em,
+dfn {
+  font-style: italic;
+}
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+mark {
+  background-color: var(--color-portafino);
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+button {
+  overflow: visible;
+  border: none;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+
+  -webkit-appearance: button;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+input:focus {
+  outline: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  box-sizing: content-box;
+
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  padding: 0;
+  border: 0;
+}
+textarea {
+  overflow: auto;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0;
+}
+
+/* Defaults
+/* ---------------------------------------------------------- */
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 62.5%;
+  background-color: #ff006e;
+  color: var(--color-outer-space);
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 1.5rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" on;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+::selection {
+  text-shadow: none;
+  background: var(--color-hawkes-blue);
+}
+
+hr {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 1.8em 0 2.4em;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--color-mystic);
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote {
+  margin: 0 0 1.5em 0;
+}
+
+ol,
+ul {
+  padding-left: 1.3em;
+  padding-right: 1.5em;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0.5em 0 1em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul,
+ol {
+  max-width: 100%;
+}
+
+li {
+  margin: 0.5em 0;
+  padding-left: 0.3em;
+  line-height: 1.6em;
+}
+
+dt {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 120px;
+  font-weight: 500;
+  text-align: right;
+}
+
+dd {
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+blockquote {
+  margin: 0.3em 0 1.8em;
+  padding: 0 1.6em 0 1.6em;
+  border-left: var(--color-hawkes-blue) 0.5em solid;
+}
+
+blockquote p {
+  margin: 0.8em 0;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+/* Quotation marks */
+blockquote small:before {
+  content: "\2014 \00A0";
+}
+
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+  font-weight: normal;
+}
+
+a {
+  color: var(--color-picton-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.15;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 4rem;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+h4 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+h5 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+h6 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}

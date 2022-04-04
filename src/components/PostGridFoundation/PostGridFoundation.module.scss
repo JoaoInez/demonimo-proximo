@@ -1,0 +1,13 @@
+.gridContainer {
+    padding: 8vw 0 2vw;
+  
+    .grid {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  

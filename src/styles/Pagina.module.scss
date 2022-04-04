@@ -1,0 +1,24 @@
+.headerContainer {
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+  
+    .header {
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      h1 {
+        margin-bottom: 0;
+        color: #fff;
+        font-size: 12vw;
+        font-family: var(--font-robert-sans);
+        margin-left: 2vw;
+        text-transform: uppercase;
+      }
+    }
+  }
+  

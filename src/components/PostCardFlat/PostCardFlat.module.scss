@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  
+    a {
+      display: block;
+    }
+  
+    .postImage {
+      position: relative;
+      display: block;
+      flex-basis: 100%;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #000;
+      z-index: 0;
+  
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  
+    .postTitle {
+      flex: 1;
+      color: #fff;
+      font-family: var(--font-monteserrat);
+  
+      h4 {
+        font-weight: bold;
+        transition: all 0.1s ease-in-out;
+      }
+  
+      &:hover {
+        text-decoration: none;
+        color: #ff7b00;
+      }
+    }
+  
+    .author {
+      font-family: var(--font-monteserrat);
+      color: var(--color-athens-gray);
+      text-transform: uppercase;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-decoration: line-through;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 2px;
+      transition: all 0.1s ease-in-out;
+  
+      &:hover {
+        text-decoration-color: red;
+      }
+    }
+  }
+  
