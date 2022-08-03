@@ -9,13 +9,13 @@ interface IProps {
 const GhostPage = ({ page }: IProps) => (
   <div>
     <h1>{page.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: page.html ?? '' }} />
+    <div dangerouslySetInnerHTML={{ __html: page.html ?? "" }} />
   </div>
 );
 
 export const getStaticPaths = async () => {
   const pages = await getAllPages();
-  const paths = pages.map(page => ({
+  const paths = pages.map((page) => ({
     params: { slug: page.slug },
   }));
 
@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const page = await getPage((params?.slug ?? '') as string);
+  const page = await getPage((params?.slug ?? "") as string);
 
   if (!page) return { notFound: true };
 

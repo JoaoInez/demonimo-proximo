@@ -157,14 +157,15 @@
 /* ---------------------------------------------------------- */
 :root {
   /* Colours */
-  --color-picton-blue: #26a8ed;
-  --color-hawkes-blue: #cbeafb;
-  --color-portafino: #fdffb6;
-  --color-mystic: #e3e9ed;
-  --color-athens-gray: #e9ecef;
-  --color-outer-space: #343a40;
-  --color-woodsmoke: #15171a;
-  --color-cod-gray: #0a0a0a;
+  --color-blue-jeans: #26a8ed;
+  --color-colombia-blue: #cbeafb;
+  --color-lemon-yellow-crayola: #fdffb6;
+  --color-cultured: #e9ecef;
+  --color-onyx: #343a40;
+  --color-eerie-black: #15171a;
+  --color-rich-black-fogra-39: #0a0a0a;
+  --color-heat-wave: #ff7b00;
+  --color-melon: #fec5bb;
 
   /* Fonts */
   --font-unifraktur: "UnifrakturMaguntia", cursive;
@@ -362,7 +363,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 mark {
-  background-color: var(--color-portafino);
+  background-color: var(--color-lemon-yellow-crayola);
 }
 code,
 kbd,
@@ -452,8 +453,8 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 62.5%;
-  background-color: #ff006e;
-  color: var(--color-outer-space);
+  // background-color: #ff006e;
+  color: var(--color-onyx);
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -474,7 +475,7 @@ body {
 
 ::selection {
   text-shadow: none;
-  background: var(--color-hawkes-blue);
+  background: var(--color-colombia-blue);
 }
 
 hr {
@@ -485,7 +486,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid var(--color-mystic);
+  border-top: 1px solid var(--color-cultured);
 }
 
 audio,
@@ -563,7 +564,7 @@ dd {
 blockquote {
   margin: 0.3em 0 1.8em;
   padding: 0 1.6em 0 1.6em;
-  border-left: var(--color-hawkes-blue) 0.5em solid;
+  border-left: var(--color-colombia-blue) 0.5em solid;
 }
 
 blockquote p {
@@ -591,7 +592,7 @@ blockquote cite a {
 }
 
 a {
-  color: var(--color-picton-blue);
+  color: var(--color-blue-jeans);
   text-decoration: none;
 }
 

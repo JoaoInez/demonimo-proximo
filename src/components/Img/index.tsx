@@ -8,7 +8,7 @@ const Img = ({
   ImageProps,
   "layout" | "objectFit" | "objectPosition" | "quality" | "width" | "height"
 >) => (
-  <div className={`${styles.imageContainer} ${className ?? ""}`}>
+  <div className={`${styles.container} ${className ?? ""}`}>
     <Image
       {...props}
       layout="fill"
