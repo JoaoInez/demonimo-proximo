@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  height: 80vh;
+  padding: 6rem;
+  gap: 18rem;
+}
+
+.image {
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

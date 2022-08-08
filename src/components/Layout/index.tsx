@@ -6,10 +6,7 @@ interface IProps {
 }
 
 const Layout = ({ children }: IProps) => (
-  <main className={styles.main}>
-    {/* <Header /> */}
-    <section>{children}</section>
-  </main>
+  <main className={styles.main}>{children}</main>
 );
 
 export default Layout;
