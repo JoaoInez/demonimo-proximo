@@ -1,12 +1,9 @@
-import { PostOrPage, PostsOrPages } from "@tryghost/content-api";
-import { getAllPosts, getPost, getRelatedPosts } from "api/ghost";
+import { getAllPosts, getPost, getRelatedPosts } from "domain/common/api/ghost";
+import Story from "domain/stories/components/Story";
+import { StoryProps } from "domain/stories/components/Story/types";
 import { GetStaticProps } from "next";
-interface IProps {
-  post: PostOrPage;
-  relatedPosts: PostsOrPages;
-}
 
-const PostPage = ({ post, relatedPosts }: IProps) => null;
+const StoryPage = (props: StoryProps) => <Story {...props} />;
 
 export const getStaticPaths = async () => {
   const posts = await getAllPosts();
@@ -31,4 +28,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default PostPage;
+export default StoryPage;

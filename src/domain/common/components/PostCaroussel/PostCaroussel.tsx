@@ -1,12 +1,8 @@
-import { PostsOrPages } from "@tryghost/content-api";
-import Img from "components/Img";
+import Img from "domain/common/components/Img";
 import styles from "./PostCaroussel.module.scss";
+import { PostCarousselProps } from "./types";
 
-interface IProps {
-  posts: PostsOrPages;
-}
-
-const PostCaroussel = ({ posts }: IProps) => {
+const PostCaroussel = ({ posts }: PostCarousselProps) => {
   const post = posts[1];
 
   return (

@@ -1,11 +1,8 @@
-import { Authors } from "@tryghost/content-api";
-import { getAuthors } from "api/ghost";
+import Authors from "domain/authors/components/Authors";
+import { AuthorsProps } from "domain/authors/components/Authors/types";
+import { getAuthors } from "domain/common/api/ghost";
 
-interface IProps {
-  authors: Authors;
-}
-
-const AuthorsPage = ({ authors }: IProps) => null;
+const AuthorsPage = (props: AuthorsProps) => <Authors {...props} />;
 
 export const getStaticProps = async () => {
   const authors = await getAuthors();

@@ -1,17 +1,9 @@
-import { PostOrPage } from "@tryghost/content-api";
-import { getAllPages, getPage } from "api/ghost";
+import { getAllPages, getPage } from "domain/common/api/ghost";
+import Page from "domain/ghost/components/Page";
+import { PageProps } from "domain/ghost/components/Page/types";
 import { GetStaticProps } from "next";
 
-interface IProps {
-  page: PostOrPage;
-}
-
-const GhostPage = ({ page }: IProps) => (
-  <div>
-    <h1>{page.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: page.html ?? "" }} />
-  </div>
-);
+const GhostPage = (props: PageProps) => <Page {...props} />;
 
 export const getStaticPaths = async () => {
   const pages = await getAllPages();

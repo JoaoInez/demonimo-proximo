@@ -1,33 +1,8 @@
-import { PostsOrPages, SettingsResponse, Tags } from "@tryghost/content-api";
-import { getPosts, getSettings, getTags } from "api/ghost";
-import PostCaroussel from "components/PostCaroussel";
-import styles from "styles/HomePage.module.scss";
+import { getPosts, getSettings, getTags } from "domain/common/api/ghost";
+import Home from "domain/home/components/Home/Home";
+import { HomeProps } from "domain/home/components/Home/types";
 
-interface IProps {
-  settings: SettingsResponse;
-  tags: Tags;
-  posts: PostsOrPages;
-}
-
-const HomePage = ({ tags, posts }: IProps) => (
-  <>
-    <article className={styles.main}>
-      <h1 className={styles.pageTitle}>Demónimo</h1>
-      <div className={styles.ball} />
-    </article>
-    <article className={styles.categories}>
-      <div className={styles.cloud} />
-      {tags.map((tag) => (
-        <div className={styles.category} key={tag.id}>
-          <div>
-            <p>{tag.name}</p>
-          </div>
-        </div>
-      ))}
-    </article>
-    <PostCaroussel posts={posts} />
-  </>
-);
+const HomePage = (props: HomeProps) => <Home {...props} />;
 
 export const getStaticProps = async () => {
   const settings = await getSettings();

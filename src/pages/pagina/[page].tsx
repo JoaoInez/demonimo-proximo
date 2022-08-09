@@ -1,14 +1,9 @@
-import { PostsOrPages } from "@tryghost/content-api";
-import { getAllPosts, getPosts, PAGE_LIMIT } from "api/ghost";
+import { getAllPosts, getPosts, PAGE_LIMIT } from "domain/common/api/ghost";
+import PageNumber from "domain/home/components/PageNumber";
+import { PageNumberProps } from "domain/home/components/PageNumber/types";
 import { GetStaticProps } from "next";
 
-interface IProps {
-  posts: PostsOrPages;
-  page: number;
-  pagesCount: number;
-}
-
-const PageNumberPage = ({ posts, page, pagesCount }: IProps) => null;
+const PageNumberPage = (props: PageNumberProps) => <PageNumber {...props} />;
 
 export const getStaticPaths = async () => {
   const pages = Math.ceil((await getAllPosts()).length / PAGE_LIMIT);
